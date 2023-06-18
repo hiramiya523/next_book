@@ -1,0 +1,13 @@
+# 公式かつ、slim imageかつ、安定バージョンかつ、debian
+FROM node:20.2.0-bullseye-slim
+
+ENV TZ Asia/Tokyo
+ARG UID=${FRONT_UID}
+ARG GID=${FRONT_GID}
+
+RUN npm i -g pnpm
+
+USER node
+RUN mkdir /home/node/next 
+
+WORKDIR /home/node/

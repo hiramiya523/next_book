@@ -1,0 +1,16 @@
+services:
+  front:
+    hostname: front-container
+    build:
+      context: ./docker/front
+      dockerfile: Dockerfile-front
+      # build用変数
+      args:
+        FRONT_UID: ${UID}
+        FORNT_GID: ${GID}
+    tty: true
+    ports:
+      - 127.0.1.2:${FRONT_PUBLIC_PORT}:3000
+    user: ${UID}:${GID}
+    volumes:
+      - ./src:/home/node/next

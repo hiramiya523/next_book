@@ -1,0 +1,8 @@
+**/node_modules
+**/.env
+**/.vscode
+**/Dockerfile*
+**/.git
+**/.gitignore
+LICENSE
+README.md
