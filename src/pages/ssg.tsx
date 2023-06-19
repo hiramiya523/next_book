@@ -3,7 +3,7 @@ import { NextPage } from "next"
 // Headタグの指定に必要. メタデータを各ページに使いまわせる
 import Head from "next/head"
 
-import { GetStaticProps, NextPageContext } from "next"
+import { GetStaticProps } from "next"
 
 
 type SSGProps = {
