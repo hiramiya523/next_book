@@ -5,6 +5,8 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
 // import { ParsedUrlQuery } from "querystring";
 import Head from "next/head";
+
+// ルーティングのためのフック。ルーティング情報の他、router.pushでページ遷移可能。
 import { useRouter } from "next/router";
 
 // interface PostProps extends ParsedUrlQuery {

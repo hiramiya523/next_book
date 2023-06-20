@@ -1,3 +1,6 @@
+/**
+ * Static Site Generation
+ */
 // NextPageは、Next.jsのPages向けの型
 import { NextPage } from "next"
 // Headタグの指定に必要. メタデータを各ページに使いまわせる
