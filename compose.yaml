@@ -14,3 +14,21 @@ services:
     user: ${UID}:${GID}
     volumes:
       - ./src:/home/node/next
+    deploy:
+      resources:
+        # 確保
+        reservations:
+          cpus: '0.25' # コア数
+          memory: 20M
+          
+        # 上限
+        limits:
+          cpus: '0.50'
+          memory: 50M
+          # pids: 20 // 初期、13くらいあるな
+#     secrets:
+#       - my_secret
+
+# secrets:
+#   my_secret:
+#     file: my_secret.txt
