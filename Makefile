@@ -28,10 +28,16 @@ ps:
 log:
 	@$(COMPOSE) logs
 
+stats:
+	docker stats
+
 #################################
 
 bs:
 	@$(COMPOSE) exec $(word 2, $(MAKECMDGOALS)) bash
+
+root-bs:
+	@$(COMPOSE) exec --user root $(word 2, $(MAKECMDGOALS)) bash
 
 # 引数を与えて動的コマンド実行も可能 ⇒ 使い道あるかもしれないから覚えとけ
 say_hello:
