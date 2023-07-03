@@ -1,6 +1,8 @@
 services:
   front:
     hostname: front-container
+    env_file: 
+      - .env
     build:
       context: ./docker/front
       dockerfile: Dockerfile-front
